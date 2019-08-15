@@ -3,7 +3,7 @@ and one to trigger changes to the file.
 
 In one terminal use watch to touch the target file at one-second intervals:
 ```
-$ watch -n 1 touch target.txt
+$ watch -n 1 touch ../filesystem/target.txt
 ```
 
 In a second terminal, run the watcher service:
