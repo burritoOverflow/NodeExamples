@@ -7,7 +7,7 @@ const server = require('net').createServer(connection => {
     
     // send two message chunks that comprise a whole.
     const firstChunk = '{"type": "changed", "timesta';
-    const secondChunk = 'mp": 1450694370094\n';
+    const secondChunk = 'mp": 1450694370094}\n';
 
     // send the first chunk immediately
     connection.write(firstChunk);
