@@ -13,4 +13,4 @@ subscriber.on('message', data => {
     const date = new Date(message.timestamp);
     console.log(`${message.file} changed at ${date}`);
 });
-subscriber.connect("tcp://localhost:60400")
+subscriber.connect("tcp://localhost:60400");
