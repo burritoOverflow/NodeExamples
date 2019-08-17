@@ -1,3 +1,5 @@
+Examples from 'Node.js 8 the Right Way', chapter 3
+
 To demonstrate the net-watcher examples, we'll need three terminals: one for the service, one for the client, 
 and one to trigger changes to the file.
 
