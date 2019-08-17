@@ -21,4 +21,4 @@ publisher.bind('tcp://*:60400', err => {
         throw err;
     }
     console.log('Listening for zmq subscribers.');
-})
+});
