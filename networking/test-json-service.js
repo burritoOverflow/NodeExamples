@@ -1,5 +1,4 @@
 // see pages 36 and 37 for an explanation.
-
 'use strict'
 
 const server = require('net').createServer(connection => {
