@@ -1,4 +1,6 @@
 const EventEmitter = require('events').EventEmitter;
+
+// module created to buffer data events
 class LDJClient extends EventEmitter {
     constructor(stream) {
         super();
