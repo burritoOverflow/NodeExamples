@@ -11,6 +11,7 @@ server.on('request', (req, res) => {
     case '/home':
     case '/about':
       res.writeHead(200, { 'content-type': 'text/html' });
+      // parse the url to locate the appropriate html file
       res.end(fs.readFileSync(`./${req.url}.html`));
       break;
     // redirect for the root route
