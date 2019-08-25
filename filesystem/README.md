@@ -19,7 +19,7 @@ drwxr-xr-x  15 robertschumann  staff  480 Aug 25 16:50 ..
 -rw-r--r--   1 robertschumann  staff    1 Aug 17 16:50 file8
 -rw-r--r--   1 robertschumann  staff    1 Aug 16 16:50 file9
 ```
-```
+
 run the script to purge old files:
 ```
 $ node delete-old-files.js
