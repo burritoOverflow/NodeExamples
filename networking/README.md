@@ -38,7 +38,7 @@ hello
 
 Now with another shell:
 ```
-☺  nc localhost 8000
+$ nc localhost 8000
 Hello Client!
 Your id is: 1
 Hello
