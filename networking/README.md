@@ -26,7 +26,7 @@ File changed Thu Aug 15 2019 18:58:14 GMT-0400 (Eastern Daylight Time)
 File changed Thu Aug 15 2019 18:58:15 GMT-0400 (Eastern Daylight Time)
 ```
 
-For the example chat server:
+For the example chat server (net-module-example.js):
 To connect a client:
 ```
 $ nc localhost 8000                                                  [21:54:03]
