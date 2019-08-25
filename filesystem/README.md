@@ -1,4 +1,4 @@
-For the script to purge old records, run the create file script
+For the script to demonstrate how to purge old files, first run the create file script
 ```
 $ node create-old-files.js
 ```
