@@ -9,7 +9,7 @@ const readFileAsArray = function(file, callback) {
         const lines = data.toString().trim().split('\n');
         callback(null, lines);
     });
-}
+};
 
 // example call
 // callback is passed as last argument to the host function
