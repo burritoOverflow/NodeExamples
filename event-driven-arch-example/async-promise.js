@@ -30,6 +30,7 @@ readFileAsArray('./numbers.txt')
     })
     .catch(console.error);
 
+
 // example call with callback
 // callback is passed as last argument to the host function
 readFileAsArray('./numbers.txt', (err, lines) => {
@@ -41,4 +42,17 @@ readFileAsArray('./numbers.txt', (err, lines) => {
     console.log(`Odd numbers count: ${oddNumbers.length}`);
 });
 
-console.log('Look, promises and callbacks!');
+// allows for programming in a manner that resembles synchronous calls
+async function countOdd() {
+    try {
+        const lines = await readFileAsArray('./numbers.txt');
+        const numbers = lines.map(Number);
+        const oddNumbers = numbers.filter(number => number % 2 === 1);
+        console.log(`Odd numbers count: ${oddNumbers.length}`);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+countOdd();
+console.log('Look: promises, callbacks, and async/await!');
