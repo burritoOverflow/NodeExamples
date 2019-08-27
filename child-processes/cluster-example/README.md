@@ -142,11 +142,54 @@ Process 14561 listening on port 8000
 
 In another shell start the benchmark:
 ```
-ab -c200 -t10 http://localhost:8000/
+$ ab -c200 -t10 http://localhost:8000/
 ```
 
 In yet another shell, send the SIGUSR2 signal to the process
 ```
-kill -SIGUSR2 14557
+$ kill -SIGUSR2 14557
 ``` 
 
+Note that despite sending the signal and restarting all workers,
+0 requests failed.
+```
+Benchmarking localhost (be patient)
+Finished 1397 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /
+Document Length:        34 bytes
+
+Concurrency Level:      200
+Time taken for tests:   10.002 seconds
+Complete requests:      1397
+Failed requests:        0
+Total transferred:      152273 bytes
+HTML transferred:       47498 bytes
+Requests per second:    139.67 [#/sec] (mean)
+Time per request:       1431.911 [ms] (mean)
+Time per request:       7.160 [ms] (mean, across all concurrent requests)
+Transfer rate:          14.87 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    3   8.4      0      32
+Processing:    37 1329 305.3   1375    1727
+Waiting:       14 1327 309.1   1375    1726
+Total:         38 1332 298.0   1376    1727
+
+Percentage of the requests served within a certain time (ms)
+  50%   1376
+  66%   1396
+  75%   1416
+  80%   1476
+  90%   1590
+  95%   1680
+  98%   1709
+  99%   1714
+ 100%   1727 (longest request)
+ ```
