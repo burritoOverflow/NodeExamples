@@ -127,3 +127,26 @@ Percentage of the requests served within a certain time (ms)
 ```
 
 Note the requests per second metric is more than double for the clustered approach
+
+For the final clustered example:
+start the server and take note of the Master PID:
+```
+$ node cluster-manage-crash.js                                                      
+Forking for 4
+Master PID: 14557
+Process 14559 listening on port 8000
+Process 14558 listening on port 8000
+Process 14560 listening on port 8000
+Process 14561 listening on port 8000
+```
+
+In another shell start the benchmark:
+```
+ab -c200 -t10 http://localhost:8000/
+```
+
+In yet another shell, send the SIGUSR2 signal to the process
+```
+kill -SIGUSR2 14557
+``` 
+
