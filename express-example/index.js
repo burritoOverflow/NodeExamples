@@ -1,15 +1,15 @@
 const express = require('express');
 
 const server = express();
+server.set('view engine', 'ejs');
 
 // listeners are defined per url
 server.get('/', (req, res) => {
-  // .end is invoked automatically
-  res.send('Hello from Express');
+  res.render('index');
 });
 
 server.get('/about', (req, res) => {
-  res.send('Hello from About');
+  res.render('about');
 });
 
 server.listen(8000, () => {
