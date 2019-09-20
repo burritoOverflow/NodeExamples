@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>People List</title>
+  </head>
+  <body>
+    <% if (people.length) { %>
+      <p>People: </p>
+      <ul>
+        <% people.forEach((person) => { %>
+          <li><%= person.name %> (<%= person.age %>)</li>
+        <% }) %>
+      </ul>
+      <% } %>
+  </body>
+</html>
